@@ -1,0 +1,72 @@
+@media (min-width: 992px) {
+	// NAVIGATION
+	.nav {
+		&__bar {
+			height: 100px;
+		}
+
+		&__btn {
+			display: none;
+		}
+
+		&__logo {
+			margin: 1em 1.2em;
+			a {
+				font-size: 3.4rem;
+			}
+		}
+
+		&__list {
+			display: block;
+			list-style: none;
+			padding-right: 60.8px;
+
+			&-item {
+				display: inline-block;
+				a {
+					padding: 0.8em 1.6em;
+					font-size: 2rem;
+					font-weight: 600;
+					color: $white;
+					text-decoration: none;
+					text-transform: capitalize;
+					transition: color 0.3s, background 0.3s;
+
+					&:hover {
+						color: $white-hover;
+					}
+				}
+
+				.contact-style {
+					margin-left: 1em;
+					border-radius: 500px;
+					color: $dark-blue;
+					background-color: $white;
+					font-family: 'Fraunces', serif;
+					font-size: 1.8rem;
+					text-transform: uppercase;
+
+					&:hover {
+						color: $white;
+						background-color: rgba(255, 255, 255, 0.4);
+					}
+				}
+			}
+		}
+	}
+
+	// HEADER
+	.header {
+		&__text {
+			h1 {
+				font-size: 5rem;
+			}
+
+			a {
+				img {
+					width: 150%;
+				}
+			}
+		}
+	}
+}
