@@ -69,4 +69,18 @@
 			}
 		}
 	}
+
+	// PROJECTS
+	.projects {
+		&__box {
+			padding: 15em 0;
+		}
+		&__text {
+			padding: 0 2.5em;
+		}
+
+		&__heading {
+			font-size: 3rem;
+		}
+	}
 }

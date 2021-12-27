@@ -1,2 +1,21 @@
 @media (min-width: 576px) {
+	// PROJECTS
+	.projects {
+		&__box {
+			padding: 22em 0;
+			background-position-y: -40px;
+		}
+
+		&__text {
+			top: 75%;
+		}
+
+		&__heading {
+			font-size: 2.8rem;
+		}
+
+		&__desc {
+			font-size: 1.8rem;
+		}
+	}
 }
