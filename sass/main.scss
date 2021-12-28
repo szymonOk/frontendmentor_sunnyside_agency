@@ -165,7 +165,7 @@ body {
 }
 
 .nav-bg {
-	opacity: 0.98;
+	opacity: 0.8;
 	background-color: $blue-bg;
 }
 
@@ -314,6 +314,82 @@ body {
 		font-size: 1.6rem;
 		font-weight: 600;
 		color: $dark-cyan;
+	}
+}
+
+// CLIENT
+.client {
+	background-color: $body-bg;
+	padding: 3em 2em;
+	text-align: center;
+
+	&__heading {
+		padding-top: 1em;
+		font-family: 'Fraunces', serif;
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: $grayish-blue;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+	}
+
+	&__container {
+		margin: 2em 0 0;
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+	}
+
+	&__item {
+		padding: 1.8em 0;
+
+		&-img {
+			margin-bottom: 1em;
+			img {
+				width: 80px;
+				border-radius: 50%;
+			}
+		}
+
+		&-text {
+			font-size: 1.6rem;
+			font-weight: 600;
+			color: $very-dark-grayish-blue;
+			line-height: 150%;
+			margin-bottom: 1.6em;
+		}
+
+		&-name {
+			h3 {
+				font-family: 'Fraunces', serif;
+				font-size: 1.8rem;
+				color: $very-dark-blue;
+				margin-bottom: 0.4em;
+			}
+			p {
+				color: $grayish-blue;
+				font-size: 1.5rem;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+// GALLERY
+.gallery {
+	display: grid;
+
+	&__img {
+		&-desktop {
+			display: none;
+		}
+
+		&-mobile {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
 	}
 }
 
