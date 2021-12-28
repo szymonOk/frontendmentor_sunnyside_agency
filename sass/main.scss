@@ -8,7 +8,7 @@ body {
 	//font-family: 'Fraunces', serif;
 	font-size: 1.8rem;
 	height: 100vh;
-	background-color: #3ebfff;
+	background-color: $blue-bg;
 }
 
 .wrapper {
@@ -21,7 +21,9 @@ body {
 .nav {
 	position: fixed;
 	width: 100%;
+	z-index: 10;
 	&__bar {
+		// position: relative;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -104,9 +106,61 @@ body {
 		}
 	}
 
-	&__list {
+	&__list-desktop {
 		display: none;
 	}
+
+	&__list-mobile {
+		display: none;
+		position: absolute;
+		top: 120%;
+		left: 50%;
+		transform: translateX(-50%);
+		flex-direction: column;
+		background-color: $body-bg;
+		padding: 2em;
+		width: 80%;
+		text-align: center;
+		list-style: none;
+		z-index: 10;
+
+		&-item {
+			a {
+				display: block;
+				padding: 0.8em 0.1em;
+				width: 140px;
+				margin: 0 auto;
+				font-weight: 600;
+				text-decoration: none;
+				text-transform: capitalize;
+				color: $dark-grayish-blue;
+				transition: color 0.3s, background 0.3s;
+
+				&:hover {
+					color: $blue-bg;
+				}
+			}
+
+			.contact-style-mobile {
+				border-radius: 500px;
+				color: $dark-blue;
+				background-color: $yellow;
+				font-family: 'Fraunces', serif;
+				font-size: 1.8rem;
+				text-transform: uppercase;
+				margin-top: 0.8em;
+
+				&:hover {
+					color: $white;
+					background-color: $blue-bg;
+				}
+			}
+		}
+	}
+}
+
+.nav__list-mobile--active {
+	display: flex;
 }
 
 // HEADER
@@ -132,6 +186,7 @@ body {
 			text-transform: uppercase;
 			color: $white;
 			margin-bottom: 1.5em;
+			padding: 0 1em;
 		}
 
 		a {
@@ -139,6 +194,7 @@ body {
 			display: inline-block;
 			transition: opacity 0.3s;
 			animation: heartbeat 2.2s ease-in-out infinite alternate both;
+			z-index: -10;
 
 			&:hover {
 				opacity: 0.6;

@@ -16,7 +16,11 @@
 			}
 		}
 
-		&__list {
+		&__list-mobile {
+			display: none;
+		}
+
+		&__list-desktop {
 			display: block;
 			list-style: none;
 			padding-right: 60.8px;
@@ -37,7 +41,7 @@
 					}
 				}
 
-				.contact-style {
+				.contact-style-desktop {
 					margin-left: 1em;
 					border-radius: 500px;
 					color: $dark-blue;
