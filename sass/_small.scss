@@ -18,4 +18,14 @@
 			font-size: 1.8rem;
 		}
 	}
+
+	.nav {
+		&__btn {
+			margin-right: 20px;
+		}
+		&__list-mobile {
+			width: 45%;
+			transform: translateX(0);
+		}
+	}
 }

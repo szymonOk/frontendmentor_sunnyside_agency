@@ -9,7 +9,14 @@
 
 html {
   font-size: 62.5%;
+  scroll-padding-top: 80px;
   scroll-behavior: smooth;
+}
+
+@media (min-width: 992px) {
+  html {
+    scroll-padding-top: 100px;
+  }
 }
 
 /* ----------------------------------------------
@@ -231,6 +238,8 @@ body {
 .nav {
   position: fixed;
   width: 100%;
+  -webkit-transition: background 0.3s, opacity 0.3s;
+  transition: background 0.3s, opacity 0.3s;
   z-index: 10;
 }
 
@@ -272,7 +281,6 @@ body {
   border-radius: 500px;
   cursor: pointer;
   padding: 1.5em;
-  margin-right: 20px;
 }
 
 .nav__btn:focus {
@@ -329,9 +337,11 @@ body {
 }
 
 .nav__list-mobile {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
-  top: 120%;
+  top: 110%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -340,11 +350,19 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #f0f0f0;
-  padding: 2em;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 3em 2em 2em 2em;
   width: 80%;
   text-align: center;
   list-style: none;
   z-index: 10;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0;
+  -webkit-clip-path: polygon(0 10%, 90% 10%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 10%, 90% 10%, 100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
 }
 
 .nav__list-mobile-item a {
@@ -379,10 +397,14 @@ body {
   background-color: #3ebfff;
 }
 
+.nav-bg {
+  opacity: 0.98;
+  background-color: #3ebfff;
+}
+
 .nav__list-mobile--active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  opacity: 1;
+  pointer-events: visible;
 }
 
 .header {
@@ -417,7 +439,6 @@ body {
   text-transform: uppercase;
   color: white;
   margin-bottom: 1.5em;
-  padding: 0 1em;
 }
 
 .header__text a {
@@ -432,6 +453,12 @@ body {
 
 .header__text a:hover {
   opacity: 0.6;
+}
+
+@media (min-width: 500px) {
+  .header__text h1 {
+    padding: 0 1em;
+  }
 }
 
 .about {
@@ -566,6 +593,14 @@ body {
   }
   .projects__desc {
     font-size: 1.8rem;
+  }
+  .nav__btn {
+    margin-right: 20px;
+  }
+  .nav__list-mobile {
+    width: 45%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 

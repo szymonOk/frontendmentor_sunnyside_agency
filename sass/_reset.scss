@@ -8,5 +8,12 @@
 
 html {
 	font-size: 62.5%;
+	scroll-padding-top: 80px;
 	scroll-behavior: smooth;
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 100px;
+	}
 }
