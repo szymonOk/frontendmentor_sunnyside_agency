@@ -11,6 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;400;600;900&family=Fraunces:wght@700;900&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5bcf0b1944.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -35,14 +37,14 @@
                 <li class="nav__list-mobile-item"><a href="#about">about</a></li>
                 <li class="nav__list-mobile-item"><a href="#services">services</a></li>
                 <li class="nav__list-mobile-item"><a href="#projects">projects</a></li>
-                <li class="nav__list-mobile-item"><a class="contact-style-mobile" href="#contact">contact</a></li>
+                <li class="nav__list-mobile-item"><a class="contact-style-mobile" href="#footer">contact</a></li>
             </ul>
 
             <ul class="nav__list-desktop">
                 <li class="nav__list-desktop-item"><a href="#about">about</a></li>
                 <li class="nav__list-desktop-item"><a href="#services">services</a></li>
                 <li class="nav__list-desktop-item"><a href="#projects">projects</a></li>
-                <li class="nav__list-desktop-item"><a class="contact-style-desktop" href="#contact">contact</a></li>
+                <li class="nav__list-desktop-item"><a class="contact-style-desktop" href="#footer">contact</a></li>
             </ul>
         </div>
     </nav>
@@ -51,8 +53,9 @@
     <header class="header">
         <div class="header__img">
             <div class="header__text">
-                <h1>we are creatives</h1>
-                <a href="#about"><img src="./images/icon-arrow-down.svg" alt=""></a>
+                <h1 data-aos="fade-up" data-aos-delay="200">we are creatives</h1>
+                <a data-aos="fade-up" data-aos-delay="400" href="#about"><img src="./images/icon-arrow-down.svg"
+                        alt=""></a>
             </div>
         </div>
     </header>
@@ -61,7 +64,7 @@
 
         <!-- ABOUT SECTION -->
         <section id="about" class="about wrapper">
-            <div class="about__text section-wrapper">
+            <div data-aos="fade-right" data-aos-delay="200" class="about__text section-wrapper">
                 <h2 class="about__heading section-heading">Transform your brand</h2>
                 <p class="about__desc section-desc">We are a full-service creative agency specializing in helping brands
                     grow.
@@ -78,7 +81,7 @@
 
         <!-- SERVICES SECTION -->
         <section id="services" class="services wrapper">
-            <div class="services__text section-wrapper">
+            <div data-aos="fade-left" data-aos-delay="200" class="services__text section-wrapper">
                 <h2 class="services__heading section-heading">Stand out to the right audience</h2>
                 <p class="services__desc section-desc">Using a collaborative formula of designers, researchers,
                     photographers, videographers, and copywriters, we'll build
@@ -121,7 +124,7 @@
             <h2 class="client__heading">client testimonials</h2>
             <div class="client__container">
 
-                <div class="client__item client__item--first">
+                <div data-aos="fade-up" data-aos-delay="300" class="client__item client__item--first">
                     <div class="client__item-img">
                         <img src="./images/image-emily.jpg" alt="emily r.">
                     </div>
@@ -133,7 +136,7 @@
                     </div>
                 </div>
 
-                <div class="client__item client__item--second">
+                <div data-aos="fade-up" data-aos-delay="200" class="client__item client__item--second">
                     <div class="client__item-img">
                         <img src="./images/image-thomas.jpg" alt="thomas s.">
                     </div>
@@ -146,7 +149,7 @@
                     </div>
                 </div>
 
-                <div class="client__item client__item--third">
+                <div data-aos="fade-up" data-aos-delay="370" class="client__item client__item--third">
                     <div class="client__item-img">
                         <img src="./images/image-jennie.jpg" alt="jennie f.">
                     </div>
@@ -195,10 +198,27 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-
+    <footer id="footer" class="footer wrapper">
+        <div class="footer__box">
+            <h2 class="footer__heading">
+                <a href="#">sunnyside</a>
+            </h2>
+            <div class="footer__nav">
+                <a href="#about">about</a>
+                <a href="#services">services</a>
+                <a href="#projects">projects</a>
+            </div>
+            <div class="footer__links">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aos.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
